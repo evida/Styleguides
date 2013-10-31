@@ -1,0 +1,169 @@
+/*
+ *  Subnav component
+ *
+ *  IPN - Pedro Nunes Institute - http://ipn.pt
+ *  Coimbra, Portugal
+ */
+
+/* Subnav from Twitter Bootstrap Docs */
+
+.subnav {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  .user-select(none);
+}
+.subnav .nav {
+  margin-bottom: 0;
+}
+.subnav .nav > li {
+  width: 33.33333%;
+  text-align: center;
+  background-image: linear-gradient(bottom, rgb(234,234,234) 46%, rgb(249,249,249) 73%);
+  background-image: -o-linear-gradient(bottom, rgb(234,234,234) 46%, rgb(249,249,249) 73%);
+  background-image: -moz-linear-gradient(bottom, rgb(234,234,234) 46%, rgb(249,249,249) 73%);
+  background-image: -webkit-linear-gradient(bottom, rgb(234,234,234) 46%, rgb(249,249,249) 73%);
+  background-image: -ms-linear-gradient(bottom, rgb(234,234,234) 46%, rgb(249,249,249) 73%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.46, rgb(234,234,234)),
+    color-stop(0.73, rgb(249,249,249))
+  );
+}
+.subnav .nav > li.active {
+  background-image: linear-gradient(bottom, rgb(244,244,244) 25%, rgb(233,233,233) 73%);
+  background-image: -o-linear-gradient(bottom, rgb(244,244,244) 25%, rgb(233,233,233) 73%);
+  background-image: -moz-linear-gradient(bottom, rgb(244,244,244) 25%, rgb(233,233,233) 73%);
+  background-image: -webkit-linear-gradient(bottom, rgb(244,244,244) 25%, rgb(233,233,233) 73%);
+  background-image: -ms-linear-gradient(bottom, rgb(244,244,244) 25%, rgb(233,233,233) 73%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.25, rgb(244,244,244)),
+    color-stop(0.73, rgb(233,233,233))
+  );
+}
+.subnav .nav > li.active a {
+  background: none;
+}
+.subnav .nav > li > a {
+  margin: 0;
+  padding-top:    11px;
+  padding-bottom: 11px;
+  border-left: 1px solid #f5f5f5;
+  border-right: 1px solid #e5e5e5;
+  border-radius: 0;
+  color: #767D80;
+  &:hover {
+    color: @link-color;
+  }
+}
+.subnav .nav > .active > a,
+.subnav .nav > .active > a:hover {
+  padding-left: 13px;
+  color: #777;
+  background-color: #e9e9e9;
+  border-right-color: #ddd;
+  border-left: 0;
+  @shadow: inset 0 3px 5px rgba(0,0,0,.05);
+  .box-shadow(@shadow);
+}
+.subnav .nav > .active > a:hover {
+  background-image: linear-gradient(bottom, rgb(244,244,244) 25%, rgb(233,233,233) 73%);
+  background-image: -o-linear-gradient(bottom, rgb(244,244,244) 25%, rgb(233,233,233) 73%);
+  background-image: -moz-linear-gradient(bottom, rgb(244,244,244) 25%, rgb(233,233,233) 73%);
+  background-image: -webkit-linear-gradient(bottom, rgb(244,244,244) 25%, rgb(233,233,233) 73%);
+  background-image: -ms-linear-gradient(bottom, rgb(244,244,244) 25%, rgb(233,233,233) 73%);
+  cursor: default;
+}
+.subnav .nav > .active > a .caret,
+.subnav .nav > .active > a:hover .caret {
+  border-top-color: #777;
+}
+.subnav .nav > li:first-child > a,
+.subnav .nav > li:first-child > a:hover {
+  border-left: 0;
+  padding-left: 12px;
+}
+.subnav .nav > li:last-child > a {
+  border-right: 0;
+}
+
+
+/* Style changes for our design */
+
+.subnav {
+  background-image: none;
+  background-color: white;
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)"; // Reset gradient in IE
+  border: 1px solid #d2d3d3;
+  border-bottom-color: #b9babc;
+  border-top-color: #dfdfdf;
+  @shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  .box-shadow(@shadow);
+  border-radius: 3px;
+}
+.subnav .nav > li > a {
+  padding-right: 13px;
+  padding-left: 13px;
+  border: none;
+  text-align: center;
+  height: 20px;
+  border-left: 1px solid #f5f5f5;
+  border-right: 1px solid #e5e5e5;
+  &:hover {
+    background-color: transparent;
+  }
+}
+.subnav .nav > .active > a,
+.subnav .nav > .active > a:hover {
+  background-color: #f1f4f1;
+  padding-left: 14px;
+  border-bottom: none;
+  border-left: 0;
+  @shadow: inset 0 3px 5px rgba(0,0,0,.05);
+  .box-shadow(@shadow);
+}
+.subnav .nav a:hover {
+  background-color: @body-background;
+}
+
+.page-header.with-subnav {
+  // When there is a sub-navigation bar, titles should not have the bottom border
+  border-bottom: none !important;
+  margin-bottom: 0;
+}
+
+.choices-box {
+  background: rgb(248, 248, 248);
+  padding: 10px;
+  padding-left: 20px;
+  margin-bottom: 2px;
+  border: 1px solid white;
+}
+.choices-box h5 small{
+  font-weight: bold;
+}
+
+.choices-box ul{
+  list-style: none;
+}
+
+.choices-box ul li a{
+  color: rgb(110, 110, 110);
+  font-weight: bold;
+  font-size: 0.92857142857em;
+}
+
+.choices-box ul li a:hover{
+  color: rgb(154, 200, 33);
+  text-decoration: none;
+}
+

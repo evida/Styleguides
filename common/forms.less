@@ -1,0 +1,65 @@
+/*
+ *  Custom styles for forms
+ *
+ *  IPN - Pedro Nunes Institute - http://ipn.pt
+ *  Coimbra, Portugal
+ */
+
+// Remove the green success color, because it does not make sense in some forms
+.has-success .control-label {
+  color: inherit;
+}
+
+.control-group .checkbox:focus, .control-group.success .checkbox:focus,
+.control-group .radio:focus,    .control-group.success .radio:focus,
+.control-group input:focus,     .control-group.success input:focus,
+.control-group select:focus,    .control-group.success select:focus,
+.control-group textarea:focus,  .control-group.success textarea:focus {
+  border-color: rgba(0,0,0,.3);
+  .box-shadow(none);
+}
+
+input:focus:required:invalid:focus,
+textarea:focus:required:invalid:focus,
+select:focus:required:invalid:focus {
+  // Don't color red the invalid fields (reset bootstrap's HTML5 invalid states)
+  color: #555;
+  border-color: #ccc;
+  .box-shadow(none);
+}
+
+.medium-form {
+  .control-group > label {
+    font-size: 15px;
+    padding-top: 9px;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    font-size: 15px;
+    padding: 8px 10px 9px;
+    height: auto;
+  }
+}
+
+.big-form {
+  .control-group > label {
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    font-size: 16px;
+    padding: 9px 13px 10px;
+  }
+}
+
+// Reset rounded corners when input-group-addon is used with textareas
+// (bootstrap does this for inputs only)
+.input-group textarea:first-child {
+  .border-right-radius(0);
+}
+.input-group textarea:last-child {
+  .border-left-radius(0);
+}

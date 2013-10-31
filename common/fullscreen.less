@@ -1,0 +1,37 @@
+/*
+ *  Appbase Fullscreen Apps
+ *
+ *  IPN - Pedro Nunes Institute - http://ipn.pt
+ *  Coimbra, Portugal
+ */
+
+html {
+  height: 100%;
+}
+body.fullscreen {
+  padding-top: 0;
+  overflow: hidden;
+  height: 100%;
+
+  #appbase {
+    // Specially important for web layers
+    height: 100%;
+    width: 100%;
+    padding: 0 !important;
+    //margin: 0 !important;
+    overflow-y: hidden !important;
+
+    .navbar {
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  iframe.fullscreen {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width:  100%;
+  }
+}
